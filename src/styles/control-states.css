@@ -1,0 +1,32 @@
+/* Shared interactive state recipes for bordered control shells */
+
+.controlShell {
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.controlShell:focus-within:not([data-invalid='true']) {
+  border-color: var(--color-focus-border);
+  box-shadow: 0 0 0 var(--space-1) color-mix(in srgb, var(--color-focus-border) 25%, transparent);
+}
+
+.controlShell[data-invalid='true'] {
+  border-color: var(--color-error-border);
+}
+
+.controlShell:has(:is(input, textarea, select, button):disabled) {
+  background: var(--color-control-disabled-bg);
+  cursor: not-allowed;
+}
+
+.controlShell:has(:is(input, textarea, select, button):disabled)
+  :is(input, textarea, select, button) {
+  color: var(--color-control-disabled-text);
+  cursor: not-allowed;
+}
+
+.controlShell:has(:is(input, textarea, select, button):active:not(:disabled)) {
+  background: var(--color-control-active-bg);
+}

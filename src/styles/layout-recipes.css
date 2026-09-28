@@ -1,0 +1,140 @@
+/* Shared layout recipes — token-only spacing system */
+
+.screenShell {
+  width: var(--screen-width);
+  height: var(--screen-height);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.screenContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-4) var(--space-5);
+}
+
+.searchField {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  height: var(--control-height-lg);
+  padding: var(--search-field-padding);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-input);
+  box-sizing: border-box;
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--control-height-lg);
+  padding: 0 var(--input-padding-x);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-input);
+  box-sizing: border-box;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height-md);
+  height: var(--control-height-md);
+  padding: 0;
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-button);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btnWizardPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--wizard-button-padding);
+  background: var(--color-azure-900);
+  border: var(--border-width-default) solid transparent;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-wizard-primary);
+  cursor: pointer;
+}
+
+.btnWizardSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--wizard-button-padding);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-wizard-previous);
+  cursor: pointer;
+}
+
+.btnSheetPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-height-lg);
+  padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+  background: var(--color-azure-900);
+  border: var(--border-width-default) solid transparent;
+  border-radius: var(--radius-pill);
+  box-shadow:
+    inset 0 calc(var(--space-1) * -1) var(--space-3) rgba(255, 255, 255, 0.4),
+    0 var(--space-1) var(--space-1) rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.btnSheetSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-height-lg);
+  padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 var(--space-1) var(--space-1) rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.sheetHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--sheet-padding-x);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  flex-shrink: 0;
+}
+
+.sheetBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-height: 0;
+  padding: var(--sheet-padding-y) var(--sheet-padding-x);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  overflow: hidden;
+}
+
+.sheetFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--sheet-padding-y) var(--sheet-padding-x);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  flex-shrink: 0;
+}

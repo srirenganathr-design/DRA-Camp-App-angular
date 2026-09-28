@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1094" height="324" viewBox="0 0 1094 324" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 1">
+<ellipse id="Ellipse 1" cx="547" cy="162" rx="547" ry="162" fill="url(#paint0_linear_0_4)"/>
+<g id="Ellipse 2">
+<ellipse cx="547" cy="162" rx="547" ry="162" fill="url(#pattern0_0_4)" fill-opacity="0.16" style="mix-blend-mode:color-dodge"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="547" y1="324" x2="547" y2="-59.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00429F"/>
+<stop offset="1" stop-color="#0061EB"/>
+</linearGradient>
+<pattern id="pattern0_0_4" patternUnits="userSpaceOnUse" patternTransform="matrix(7.2 0 0 7.2 -0.3 0)" preserveAspectRatio="none" viewBox="-0.5 0 12 12" width="1" height="1">
+<use xlink:href="#pattern0_0_4_inner" transform="translate(-12 0)"/>
+<g id="pattern0_0_4_inner">
+<path id="Rectangle 3" d="M12 0H11.5V12H12H12.5V0H12ZM0 12H0.5V0H0H-0.5V12H0Z" fill="white"/>
+</g>
+</pattern></defs>
+</svg>
