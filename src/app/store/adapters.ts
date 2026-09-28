@@ -1,4 +1,4 @@
-import dotActive from '../assets/icons/dot-active.svg';
+const dotActive = 'assets/icons/dot-active.svg';
 import type { Patient } from '../data/patients';
 import type { Camp } from '../data/camps';
 import type {

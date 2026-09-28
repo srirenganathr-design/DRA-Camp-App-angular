@@ -1,7 +1,7 @@
-import dotScreened from '../assets/icons/dot-screened.svg';
-import dotReferred from '../assets/icons/dot-referred.svg';
-import dotTreated from '../assets/icons/dot-treated.svg';
-import dotFollowup from '../assets/icons/dot-followup.svg';
+const dotScreened = 'assets/icons/dot-screened.svg';
+const dotReferred = 'assets/icons/dot-referred.svg';
+const dotTreated = 'assets/icons/dot-treated.svg';
+const dotFollowup = 'assets/icons/dot-followup.svg';
 import type { Zone } from '../config/zones';
 
 export type PatientStatus = 'Screened' | 'Referred' | 'Treated' | 'Visited';

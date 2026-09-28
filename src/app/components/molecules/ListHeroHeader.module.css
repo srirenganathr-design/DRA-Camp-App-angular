@@ -1,0 +1,26 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--color-azure-highlight);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-white);
+  white-space: nowrap;
+}

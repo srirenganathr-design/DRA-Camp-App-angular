@@ -1,0 +1,220 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  flex-shrink: 0;
+  background: var(--color-grey-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollViewport {
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrollContent {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scrollContent::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollBottomPad {
+  height: var(--bottom-nav-height);
+  flex-shrink: 0;
+}
+
+.heroShell {
+  position: relative;
+  overflow: visible;
+}
+
+.heroBlueBackdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Figma: ellipse arc bottom ~312px; list starts ~342px — cover the 64px hero→list gap */
+  height: 342px;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ellipse {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 1094px;
+  height: 324px;
+  max-width: none;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.topChrome {
+  position: relative;
+  z-index: 5;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  height: 0;
+  width: 100%;
+  flex-shrink: 0;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentPanel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: 24px 16px 20px;
+  z-index: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.chipRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.listArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  background: var(--color-grey-100);
+}
+
+.listControls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--color-grey-100);
+  padding: 8px 16px 8px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-text-main);
+}
+
+.createBtn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 40px;
+  padding: 0 10px;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-action);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.createIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.createLabel {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.084px;
+  color: var(--color-white);
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.filterRow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: 100%;
+  flex-shrink: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filterRow::-webkit-scrollbar {
+  display: none;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.cardList > * {
+  flex-shrink: 0;
+}
+
+.emptyState {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-sub);
+  padding: 8px;
+}

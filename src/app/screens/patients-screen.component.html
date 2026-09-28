@@ -1,0 +1,101 @@
+<app-list-screen-scroll-layout
+  screenNodeId="16:3054"
+  screenName="Camp App - Patients"
+  ellipseNodeId="16:3056"
+  [ellipseSrc]="ellipseIcon"
+  mainNodeId="16:3073"
+  dividerNodeId="16:3099"
+  bodyNodeId="16:3100"
+  contentPanelNodeId="16:3101"
+  listAreaNodeId="16:3111"
+>
+  <app-status-bar statusBar nodeId="16:3058" timeNodeId="16:3072" variant="embedded" />
+
+  <app-header-bar
+    appHeader
+    rootNodeId="16:3074"
+    logoNodeId="16:3075"
+    zoneButtonNodeId="16:3098"
+    [selectedZone]="selectedZone()"
+    (zoneSelected)="onZoneChange($event)"
+  />
+
+  <div hero class="hero" data-figma-node-id="16:3102">
+    <app-list-hero-header rootNodeId="16:3103" iconNodeId="16:3104" titleNodeId="16:3105" title="Patients">
+      <app-user2-fill-icon heroIcon />
+    </app-list-hero-header>
+    <div class="searchSection" data-figma-node-id="16:3106">
+      <app-search-field
+        nodeId="16:3107"
+        [value]="searchQuery()"
+        (valueChange)="searchQuery.set($event)"
+      />
+      <div class="chipRow" data-figma-node-id="16:3108">
+        <app-filter-chip
+          nodeId="16:3109"
+          [icon]="calendarIcon"
+          [label]="timeChipLabel()"
+          [labelWeight]="500"
+          [width]="timeRangeFilter().preset === 'all' ? 125 : undefined"
+          (pressed)="timeSheetOpen.set(true)"
+        />
+        <app-filter-chip
+          nodeId="16:3110"
+          [icon]="tentLineHeroIcon"
+          [label]="campChipLabel()"
+          [labelWeight]="500"
+          [width]="138"
+          (pressed)="campSheetOpen.set(true)"
+        />
+      </div>
+    </div>
+  </div>
+
+  <section
+    listControls
+    class="listControls"
+    data-figma-node-id="16:3112"
+    aria-labelledby="all-patients-heading"
+  >
+    <div class="sectionHeader" data-figma-node-id="16:3113">
+      <h2 id="all-patients-heading" class="sectionTitle" data-figma-node-id="16:3114">All Patients</h2>
+      <a routerLink="/patients/create" class="createBtn" data-figma-node-id="16:3115" data-name="Button">
+        <img [src]="addIcon" alt="" class="createIcon" width="20" height="20" />
+        <span class="createLabel">Create Patient</span>
+      </a>
+    </div>
+    <div class="filterRow" data-figma-node-id="16:3116">
+      @for (status of statusFilterLabels; track status; let i = $index) {
+        <app-status-filter-chip
+          [nodeId]="statusFilterNodes[i]"
+          [label]="status"
+          [checked]="statusFilters()[status]"
+          (toggle)="toggleStatus(status, $event)"
+        />
+      }
+    </div>
+  </section>
+
+  <div cards class="cardList" data-figma-node-id="20:22317" data-name="Total Patients">
+    @if (filteredPatients().length > 0) {
+      @for (patient of filteredPatients(); track patient.nodeId) {
+        <app-patient-card
+          [patient]="patient"
+          [phoneVerified]="isVerified(patient)"
+          (verifyClick)="openVerification(patient)"
+        />
+      }
+    } @else {
+      <p class="emptyState">No patients match the current filters.</p>
+    }
+  </div>
+
+  <app-time-range-filter-bottom-sheet
+    screenOverlay
+    [open]="timeSheetOpen()"
+    [value]="timeRangeFilter()"
+    (closed)="timeSheetOpen.set(false)"
+    (presetSelected)="timeRangeFilter.set({ preset: $event })"
+    (customRange)="timeSheetOpen.set(false)"
+  />
+</app-list-screen-scroll-layout>

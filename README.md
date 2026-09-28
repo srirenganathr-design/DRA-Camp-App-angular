@@ -24,4 +24,6 @@ npm run test:e2e   # Playwright (after browsers installed)
 
 ## Status
 
-Bootstrap complete: routing mirrors React, in-memory store wired, screens are placeholders. Next milestone: implement **Patients** list to green `patients-parity.spec.ts`.
+**Branch `feature/patients-list`:** Patients home UI (list, filters, cards, bottom nav, time-range sheet). Playwright parity partially met — still need camp picker, date-range picker, phone verification sheet, and detail/schedule screens for full `patients-parity.spec.ts`.
+
+Push to GitHub: create `DRA-Camp-App-angular` on GitHub, then `git remote add origin … && git push -u origin main && git push origin feature/patients-list`.

@@ -1,8 +1,8 @@
-import dotActive from '../assets/icons/dot-active.svg';
-import dotScheduled from '../assets/icons/dot-scheduled.svg';
-import dotCancelled from '../assets/icons/dot-cancelled.svg';
-import dotDelayed from '../assets/icons/dot-delayed.svg';
-import dotCompleted from '../assets/icons/dot-completed.svg';
+const dotActive = 'assets/icons/dot-active.svg';
+const dotScheduled = 'assets/icons/dot-scheduled.svg';
+const dotCancelled = 'assets/icons/dot-cancelled.svg';
+const dotDelayed = 'assets/icons/dot-delayed.svg';
+const dotCompleted = 'assets/icons/dot-completed.svg';
 import type { Zone } from '../config/zones';
 
 export type CampStatus = 'Active' | 'Scheduled' | 'Cancelled' | 'Delayed' | 'Completed';

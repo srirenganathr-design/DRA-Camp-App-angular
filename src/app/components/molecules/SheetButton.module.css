@@ -1,0 +1,55 @@
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-height-lg);
+  padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--color-azure-900);
+  border: var(--border-width-default) solid transparent;
+  color: var(--color-white);
+  box-shadow: var(--shadow-sheet-primary-inset), var(--shadow-sheet-button);
+}
+
+.primary:hover {
+  background: color-mix(in srgb, var(--color-azure-900) 90%, black);
+}
+
+.secondary {
+  background: var(--color-white);
+  border: var(--border-width-default) solid var(--color-stroke-soft);
+  color: var(--color-text-sub);
+  box-shadow: 0 var(--space-1) var(--space-1) rgba(0, 0, 0, 0.12);
+}
+
+.secondary:hover {
+  background: var(--color-grey-100);
+}
+
+.primary:focus-visible,
+.secondary:focus-visible {
+  outline: var(--border-width-default) solid var(--color-focus-border);
+  outline-offset: var(--space-1);
+}
+
+.primary:active:not(:disabled) {
+  background: color-mix(in srgb, var(--color-azure-900) 88%, black);
+}
+
+.secondary:active:not(:disabled) {
+  background: var(--color-control-active-bg);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

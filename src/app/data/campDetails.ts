@@ -1,4 +1,4 @@
-import dotActive from '../assets/icons/dot-active.svg';
+const dotActive = 'assets/icons/dot-active.svg';
 
 const sharedCamp = {
   name: 'Dr. Agarwal\u2019s Eye Check-up camp',

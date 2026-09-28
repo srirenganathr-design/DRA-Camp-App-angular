@@ -1,0 +1,147 @@
+.overlay {
+  composes: overlay from './BottomSheetLayout.module.css';
+  z-index: var(--layer-bottom-sheet);
+}
+
+.sheet {
+  composes: sheet from './BottomSheetLayout.module.css';
+}
+
+.header {
+  composes: header from './BottomSheetLayout.module.css';
+}
+
+.title {
+  composes: title from './BottomSheetLayout.module.css';
+}
+
+.resetButton {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-azure-1000);
+  cursor: pointer;
+}
+
+.body {
+  composes: body from './BottomSheetLayout.module.css';
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+
+.rangeInfo {
+  width: 100%;
+  max-width: 328px;
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-azure-100);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-azure-1000);
+  text-align: center;
+}
+
+.footer {
+  composes: footer from './BottomSheetLayout.module.css';
+}
+
+.footerRow {
+  composes: footerRow from './BottomSheetLayout.module.css';
+}
+
+.calendarWrap {
+  width: 100%;
+  max-width: 328px;
+}
+
+.calendarWrap :global([data-slot='calendar']) {
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  --cell-size: 40px;
+}
+
+.calendarWrap :global(.rdp-month) {
+  width: 100%;
+  gap: var(--space-4);
+}
+
+.calendarWrap :global(.rdp-month_caption) {
+  height: auto;
+  min-height: var(--cell-size);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text-main);
+}
+
+.calendarWrap :global(.rdp-weekday) {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-text-main);
+}
+
+.calendarWrap :global(.rdp-week) {
+  margin-top: var(--space-2);
+}
+
+.calendarWrap :global(.rdp-day) {
+  height: var(--cell-size);
+}
+
+.calendarWrap :global(.rdp-day_button) {
+  width: 100%;
+  height: var(--cell-size);
+  min-width: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-text-main);
+  border-radius: var(--radius-pill);
+}
+
+.calendarWrap :global(.rdp-outside .rdp-day_button) {
+  color: var(--color-text-muted);
+}
+
+.calendarWrap :global(.rdp-day_button[data-selected-single='true']),
+.calendarWrap :global(.rdp-day_button[data-range-start='true']),
+.calendarWrap :global(.rdp-day_button[data-range-end='true']) {
+  background: var(--color-azure-1000);
+  color: var(--color-white);
+}
+
+.calendarWrap :global(.rdp-day_button[data-range-middle='true']) {
+  background: var(--color-azure-100);
+  color: var(--color-azure-1000);
+  border-radius: 0;
+}
+
+.calendarWrap :global(.rdp-button_previous),
+.calendarWrap :global(.rdp-button_next) {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  padding: 0;
+  color: var(--color-text-main);
+}
+
+.calendarWrap :global(.rdp-button_previous svg),
+.calendarWrap :global(.rdp-button_next svg) {
+  width: 20px;
+  height: 20px;
+}

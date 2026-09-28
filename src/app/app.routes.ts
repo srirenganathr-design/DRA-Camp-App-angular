@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppShellLayoutComponent } from './layout/app-shell-layout.component';
+import { PatientsScreenComponent } from './screens/patients-screen.component';
 import { RoutePlaceholderComponent } from './screens/route-placeholder.component';
 
 function placeholder(title: string) {
@@ -25,8 +26,12 @@ export const routes: Routes = [
       { path: 'camps/:campId/edit/branches', ...placeholder('Edit camp — branches') },
       { path: 'camps/:campId/edit/team', ...placeholder('Edit camp — team') },
       { path: 'camps/:campId', ...placeholder('Camp details') },
-      { path: 'patients', ...placeholder('Patients') },
-      { path: 'patients/:patientId', ...placeholder('Patient details') },
+      { path: 'patients', component: PatientsScreenComponent },
+      {
+        path: 'patients/:patientId',
+        component: RoutePlaceholderComponent,
+        data: { title: 'Patient Details' },
+      },
       { path: 'patients/:patientId/appointment', ...placeholder('Patient — appointment') },
       { path: 'patients/:patientId/schedule-appointment', ...placeholder('Schedule appointment') },
       { path: 'patients/create', ...placeholder('Create patient') },

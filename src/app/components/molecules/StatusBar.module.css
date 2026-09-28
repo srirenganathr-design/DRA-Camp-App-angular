@@ -1,0 +1,50 @@
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: var(--status-bar-height);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.statusBarEmbedded {
+  position: relative;
+  width: 100%;
+  height: var(--status-bar-height);
+  flex-shrink: 0;
+}
+
+.time {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(calc(-50% - 1px));
+  font-family: -apple-system, 'SF Pro Text', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: var(--color-white);
+}
+
+.cellular {
+  position: absolute;
+  right: 78px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wifi {
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.battery {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}

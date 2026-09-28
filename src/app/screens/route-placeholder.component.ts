@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   template: `
     <main class="placeholder" [attr.data-route]="routePath">
-      <p class="label">{{ title }}</p>
+      <h1 class="label">{{ title }}</h1>
       <p class="hint">Angular migration — UI pending</p>
     </main>
   `,

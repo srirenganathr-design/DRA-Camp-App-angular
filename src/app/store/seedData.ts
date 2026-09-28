@@ -1,9 +1,9 @@
-import dotScreened from '../assets/icons/dot-screened.svg';
-import dotReferred from '../assets/icons/dot-referred.svg';
-import dotActive from '../assets/icons/dot-active.svg';
-import dotScheduled from '../assets/icons/dot-scheduled.svg';
-import dotCancelled from '../assets/icons/dot-cancelled.svg';
-import dotDelayed from '../assets/icons/dot-delayed.svg';
+const dotScreened = 'assets/icons/dot-screened.svg';
+const dotReferred = 'assets/icons/dot-referred.svg';
+const dotActive = 'assets/icons/dot-active.svg';
+const dotScheduled = 'assets/icons/dot-scheduled.svg';
+const dotCancelled = 'assets/icons/dot-cancelled.svg';
+const dotDelayed = 'assets/icons/dot-delayed.svg';
 import type { AppState, EyeReadings, PatientRecord, CampRecord } from './types';
 import { emptyEyeReadings, emptyPatientDraft, emptyCampDraft } from './types';
 import { defaultAppointmentFormValues } from '../data/appointmentForm';
